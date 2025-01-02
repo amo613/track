@@ -1,0 +1,42 @@
+[
+    {
+        "name": "AI KAT",
+        "symbol": "AIKAT",
+        "mint": "9VrCswpnApNHj9WCbb5f4NDJtj5X6H7oK4Sx4eSipump",
+        "creator": "DVyjcp7oviDjQ6xTUAo5Q9HLo9E95TqB1ExbuZ2WCTNG",
+        "usd_market_cap": 30.831617154,
+        "total_supply": 1000000000000000.0,
+        "usd_price": 0.0,
+        "timestamp": "2025-01-02 16:05:42"
+    },
+    {
+        "name": "Pharaoh Pepe",
+        "symbol": "PPC",
+        "mint": "8hVqLBFxDj3YfZzGsGuD85VRpijGnb3scTR2zhK5pump",
+        "creator": "27jo6jFpQJeGTtmwr6dydz3br6tMXs9Cyq7EZaprnt1j",
+        "usd_market_cap": 204.524759709,
+        "total_supply": 1000000000000000.0,
+        "usd_price": 0.0,
+        "timestamp": "2025-01-02 16:00:23"
+    },
+    {
+        "name": "D.O.G.E",
+        "symbol": "D.O.G.E",
+        "mint": "82RjpLjoNe7Vq5TiYReEQiSSE1zE8xUhS3SmwwLipump",
+        "creator": "C6B9eLHXJJRy7nqbPDYza2ujvskwaSGaFJMgfiGBK4QZ",
+        "usd_market_cap": 200.547236779,
+        "total_supply": 1000000000000000.0,
+        "usd_price": 0.0,
+        "timestamp": "2025-01-02 15:55:26"
+    },
+    {
+        "name": "hi",
+        "symbol": "jf.x.com",
+        "mint": "HQC9atzKwhstrhm6u6zfpsLpKKZXh6kAvj4VFkYcpump",
+        "creator": "6zjfci2DHHW4NS3QtjXHQU3nrHpQe9KWnhrCXwgrXp8J",
+        "usd_market_cap": 271.728036369,
+        "total_supply": 1000000000000000.0,
+        "usd_price": 0.0,
+        "timestamp": "2025-01-02 15:04:29"
+    }
+]

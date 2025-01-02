@@ -234,37 +234,29 @@ def fetch_token_details(mint):
 
 # ---------------------- TKINTER AUTHENTICATION ---------------------- #
 
+import os
+import tkinter as tk
+from tkinter import simpledialog, messagebox
+
 def launch_authentication_window():
-    """Launches a Tkinter window for Telegram authentication."""
-    def send_code():
-        phone = phone_entry.get()
-        if not phone:
-            messagebox.showerror("Error", "Please enter your phone number.")
-            return
-        try:
-            # Initialize a new event loop for this thread
-            loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(loop)
-            
-            client = TelegramClient(StringSession(), TELEGRAM_API_ID, TELEGRAM_API_HASH)
-            client.connect()
-            if not client.is_user_authorized():
-                client.send_code_request(phone)
-                messagebox.showinfo("Success", f"Code sent to {phone}. Please enter the code below.")
-                logger.info(f"Sent authentication code to {phone}.")
-                st.session_state["temp_client"] = client  # Temporarily store the client
-                send_code_button.config(state='disabled')
-                authenticate_button.config(state='normal')
-            else:
-                messagebox.showinfo("Info", "Telegram client is already authorized.")
-                st.session_state["authenticated"] = True
-                client.disconnect()
-                root.destroy()
-        except Exception as e:
-            messagebox.showerror("Error", f"Failed to send code: {e}")
-            logger.error(f"Failed to send code to {phone}: {e}")
-            if 'client' in locals():
-                client.disconnect()
+    if os.environ.get('DISPLAY', '') == '':
+        print("No display found. Using terminal for authentication.")
+        phone_number = input("Enter your Telegram phone number: ")
+        if phone_number:
+            # Proceed with the authentication process
+            pass
+        else:
+            print("Error: Phone number is required for authentication.")
+        return
+
+    root = tk.Tk()
+    root.withdraw()  # Hide the main window
+    phone_number = simpledialog.askstring("Telegram Authentication", "Enter your Telegram phone number:")
+    if phone_number:
+        # Proceed with the authentication process
+        pass
+    else:
+        messagebox.showerror("Error", "Phone number is required for authentication.")
 
     def authenticate():
         code = code_entry.get()
